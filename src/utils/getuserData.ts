@@ -11,7 +11,7 @@ const fetchUserById = async (id: Types.ObjectId) => {
     await client.connect();
     
     const db = client.db(dbName);
-    const user = await db.collection("Users").findOne({ _id: id });
+    const user = await db.collection("users").findOne({ _id: id });
 
     // Close the MongoDB connection
     client.close();
