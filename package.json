@@ -1,15 +1,15 @@
 {
   "name": "@mspguarenteed/common",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
     "build/**/*"
-  ],
-  "scripts": {
+  ],  "scripts": {
     "clean": "rimraf ./build/",
-    "build": "npm run clean && tsc"
+    "build": "npm run clean && tsc",
+    "publish":"git add . && git commit -m \"updates\" && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
   "author": "",
