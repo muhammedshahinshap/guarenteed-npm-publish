@@ -1,8 +1,8 @@
-interface color {
-  red: string;
-  blue: string;
-  white: string;
-}
+export * from "./errors/req-validation";
+export * from "./errors/not-found";
+export * from "./errors/db-error";
+export * from "./errors/custErr";
 
-const data: color = { red: "sss", blue: "#ddd", white: "#ssdfds" };
-export default data;
+export * from "./middleware/errorhandler";
+export * from "./middleware/isAuth";
+export * from "./middleware/requestValidationerr";
