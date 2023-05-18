@@ -16,7 +16,7 @@ export const isAuth = (req: Request, res: Response, next: NextFunction) => {
       if (error) {
         throw new Error("UNAUTHERISED_ACCESS");
       } else {
-        const isValid = await getuserData();
+        const isValid = await getuserData(decoded.data.id);
         if (isValid) {
           req.user = isValid;
           next();
