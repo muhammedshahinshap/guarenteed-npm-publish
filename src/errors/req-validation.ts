@@ -1,6 +1,6 @@
 import { ValidationError } from "express-validator";
-import custErr from "./custErr";
-export default class ReqValidationerr extends custErr {
+import { custErr } from "./custErr";
+export class ReqValidationerr extends custErr {
   public statusCode = 400;
   constructor(public error: ValidationError[]) {
     super("Invalid Request Parameters");

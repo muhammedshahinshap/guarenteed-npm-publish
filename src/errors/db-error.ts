@@ -1,7 +1,6 @@
-import { ValidationError } from "express-validator";
-import custErr from "./custErr";
+import {custErr} from "./custErr";
 
-export default class DbError extends custErr {
+export  class DbError extends custErr {
   public statusCode = 500;
   constructor() {
     super("DB connection error");

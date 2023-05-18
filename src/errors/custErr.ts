@@ -1,4 +1,4 @@
-export default abstract class custErr extends Error {
+export abstract class custErr extends Error {
   abstract statusCode: number;
   abstract serializeError(): { message: string; field?: string }[];
   constructor(message: string) {

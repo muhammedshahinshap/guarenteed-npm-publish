@@ -8,7 +8,7 @@ declare global {
     }
   }
 }
-export default (req: Request, res: Response, next: NextFunction) => {
+export const isAuth = (req: Request, res: Response, next: NextFunction) => {
   try {
     const token = req.header("Authorization");
     if (!token) throw new Error("UNAUTHERISED_ACCESS");

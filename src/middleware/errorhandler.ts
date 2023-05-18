@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import custErr from "../errors/custErr";
+import { custErr } from "../errors/custErr";
 export const errorhandler = (
   err: Error,
   req: Request,
