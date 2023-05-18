@@ -1,5 +1,4 @@
 import mongoose, { Types } from "mongoose";
-
 import UserInterface, { userModel, userDoc } from "../interfaces/userinterface";
 const ObjectId = Types.ObjectId;
 const users = new mongoose.Schema(
@@ -57,7 +56,7 @@ const users = new mongoose.Schema(
 //   done();
 // });
 users.statics.build = (attrs: UserInterface) => {
-  return new User(attrs);
+  return new Users(attrs);
 };
-const User = mongoose.model<userDoc, userModel>("users", users);
-export default User;
+const Users = mongoose.model<userDoc, userModel>("users", users);
+export default Users;

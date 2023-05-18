@@ -1,6 +1,5 @@
-import {custErr} from "./custErr";
-
-export  class DbError extends custErr {
+import { custErr } from "./custErr";
+export class DbError extends custErr {
   public statusCode = 500;
   constructor() {
     super("DB connection error");
