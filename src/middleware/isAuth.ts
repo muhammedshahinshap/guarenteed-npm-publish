@@ -14,13 +14,13 @@ export const isAuth = (req: Request, res: Response, next: NextFunction) => {
     if (!token) throw new Error("UNAUTHERISED_ACCESS");
     jwt.verify(token, "4Zp:EBnn9i5(rRSk", async (error: any, decoded: any) => {
       if (error) {
-        throw new Error("UNAUTHERISED_ACCESSs");
+        throw new Error("UNAUTHERISED_ACCESS");
       } else {
         const isValid = await getuserData(decoded.data.id);
         if (isValid) {
           req.user = isValid;
           next();
-        } else throw new Error("UNAUTHERISED_ACCESSSS");
+        } else throw new Error("UNAUTHERISED_ACCESS");
       }
     });
   } catch (err) {
