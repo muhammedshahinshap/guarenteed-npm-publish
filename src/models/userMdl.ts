@@ -2,7 +2,7 @@ import mongoose, { Types } from "mongoose";
 
 import UserInterface, { userModel, userDoc } from "../interfaces/userinterface";
 const ObjectId = Types.ObjectId;
-const user = new mongoose.Schema(
+const users = new mongoose.Schema(
   {
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
@@ -56,8 +56,8 @@ const user = new mongoose.Schema(
 //   }
 //   done();
 // });
-user.statics.build = (attrs: UserInterface) => {
+users.statics.build = (attrs: UserInterface) => {
   return new User(attrs);
 };
-const User = mongoose.model<userDoc, userModel>("users", user);
+const User = mongoose.model<userDoc, userModel>("users", users);
 export default User;
