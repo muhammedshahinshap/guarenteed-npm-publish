@@ -1,5 +1,5 @@
 const { MongoClient, ObjectId } = require("mongodb");
-const fetchUserById = async (id: string) => {
+const fetchUserById = async () => {
   try {
     const url = "mongodb://127.0.0.1:27017/";
     const dbName = "auth";
@@ -8,7 +8,7 @@ const fetchUserById = async (id: string) => {
     const db = client.db(dbName);
     const user = await db
       .collection("users")
-      .findOne({ _id: new ObjectId(id) });
+      .findOne({ });
     client.close();
     return user;
   } catch (error) {
