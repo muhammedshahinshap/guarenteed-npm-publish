@@ -3,9 +3,9 @@ import { Subjects } from "../subjects/Subjects";
 export interface UsercreatedEvents {
   subject: Subjects.userCreated;
   data: {
-    id: ObjectId;
-    username: string;
-    password: string;
+    id?: ObjectId;
+    username?: string;
+    password?: string;
     role?: string;
     forgetPassword?: string;
     premium?: boolean;
