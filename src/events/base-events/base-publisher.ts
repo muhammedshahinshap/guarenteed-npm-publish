@@ -11,11 +11,11 @@ export abstract class Publisher<T extends Event> {
     this.client = client;
   }
   publish(data: T["data"]): Promise<void> {
-    return new Promise((res, rej) => {
+    return new Promise<void>((res, rej) => {
       this.client.publish(this.subject, JSON.stringify(data), (err) => {
-        console.log(this.subject);
         if (!err) return res();
-        else return rej();
+
+        return rej();
       });
     });
   }

@@ -29,7 +29,6 @@ export abstract class Listener<T extends Events> {
       this.subscriptionOptions()
     );
     subscribe.on("message", (msg: Message) => {
-      console.log();
       const parseData = this.parseMessage(msg);
       this.onMessage(parseData, msg);
     });
