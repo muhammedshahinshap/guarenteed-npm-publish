@@ -10,4 +10,6 @@ export * from "./middleware/requestValidationerr";
 export * from "./events/base-events/base-listener";
 export * from "./events/base-events/base-publisher";
 export * from "./events/created-events/user-created-events";
+export * from "./events/created-events/user-cart-details-event";
+
 export * from "./events/subjects/Subjects";
