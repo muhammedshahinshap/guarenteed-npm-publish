@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import { Subjects } from "../subjects/Subjects";
-export interface UsercreatedEvents {
+export interface UserCartDetailsEvent {
   subject: Subjects.userCartDetails;
   data: {
     wishList?: { _id: ObjectId }[];
