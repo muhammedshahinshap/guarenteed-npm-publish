@@ -7,7 +7,7 @@ interface Event {
 export abstract class Listener<T extends Event> {
   abstract subject: T["subject"];
   abstract queueGroupName: string;
-  abstract onMessage(data: T["data"], msg: Message): void;
+  abstract onMessage(data: T["data"], msg: Message, replyTo?: any): void;
   protected client: Stan;
   protected ackWait = 5 * 1000;
 
@@ -31,9 +31,9 @@ export abstract class Listener<T extends Event> {
       this.subscriptionOptions()
     );
 
-    subscription.on("message", (msg: Message) => {
+    subscription.on("message", (msg: Message, replyTo: any) => {
       const parsedData = this.parseMessage(msg);
-      this.onMessage(parsedData, msg);
+      this.onMessage(parsedData, msg, replyTo);
     });
   }
 
