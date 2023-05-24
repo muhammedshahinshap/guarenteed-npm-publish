@@ -3,6 +3,7 @@ import { Subjects } from "../subjects/Subjects";
 export interface JobPosterEvents {
   subject: Subjects.jobPosterData;
   data: {
+    _id: ObjectId;
     fk_id: ObjectId;
     type: string;
     noOfYears: string;
