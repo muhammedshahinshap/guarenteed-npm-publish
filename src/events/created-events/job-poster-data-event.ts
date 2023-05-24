@@ -15,5 +15,5 @@ export interface JobPosterEvents {
     reportStatus: boolean;
     createdAt?: Date;
     updatedAt?: Date;
-  }
+  }[]
 }
