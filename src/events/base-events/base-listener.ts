@@ -5,7 +5,7 @@ interface Events {
   data: any;
 }
 export abstract class Listener<T extends Events> {
-  private client: Stan;
+  protected client: Stan;
   abstract queueGroupName: string;
   abstract onMessage(data: T["data"], msg: Message): void;
   abstract subject: T["subject"];
