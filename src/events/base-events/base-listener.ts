@@ -1,10 +1,10 @@
 import nats, { Message, Stan } from "node-nats-streaming";
 import { Subjects } from "../subjects/Subjects";
-interface Events {
+interface Event {
   subject: Subjects;
   data: any;
 }
-export abstract class Listener<T extends Events> {
+export abstract class Listener<T extends Event> {
   protected client: Stan;
   abstract queueGroupName: string;
   abstract onMessage(data: T["data"], msg: Message): void;
