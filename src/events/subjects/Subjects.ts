@@ -7,4 +7,7 @@ export enum Subjects {
   jobPosterDataReply = "job:posterdataReply",
   JobHomeData = "job:homedata",
   JobHomeDataReply = "job:homedatareply",
+  MychatData = "user:mychat-data",
+  MychatDataReply = "user:mychat-data-reply",
+
 }
