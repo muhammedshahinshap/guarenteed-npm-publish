@@ -13,5 +13,7 @@ export * from "./events/created-events/user-created-events";
 export * from "./events/created-events/user-cart-details-event";
 export * from "./events/created-events/user-cart-details-reply";
 export * from "./events/created-events/job-poster-data-event";
+export * from "./events/created-events/job-poster-data-reply";
+
 
 export * from "./events/subjects/Subjects";
