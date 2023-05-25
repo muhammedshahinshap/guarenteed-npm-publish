@@ -5,4 +5,6 @@ export enum Subjects {
   userCartReplay = "user:cartdetailsreplay",
   jobPosterData = "job:posterdata",
   jobPosterDataReply = "job:posterdataReply",
+  JobHomeData = "job:homedata",
+  JobHomeDataReply = "job:homedatareply",
 }
