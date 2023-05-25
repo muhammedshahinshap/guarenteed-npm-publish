@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import { Subjects } from "../subjects/Subjects";
-export interface JobPosterDataEvent {
+export interface JobPosterReplyEvent {
   subject: Subjects.jobPosterDataReply;
   data: {
     id?: ObjectId;
