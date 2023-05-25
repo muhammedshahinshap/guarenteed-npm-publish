@@ -1,5 +1,5 @@
 import { Subjects } from "../subjects/Subjects";
 export interface UserMyChatReplyEvent {
-  subject: Subjects.JobHomeDataReply;
+  subject: Subjects.MychatDataReply;
   data: any;
 }
