@@ -18,5 +18,7 @@ export * from "./events/created-events/job-home-event";
 export * from "./events/created-events/job-home-reply-event";
 export * from "./events/created-events/user-my-chat-event";
 export * from "./events/created-events/user-mychat-reply-event";
+export * from "./events/created-events/message-single-user";
+
 
 export * from "./events/subjects/Subjects";

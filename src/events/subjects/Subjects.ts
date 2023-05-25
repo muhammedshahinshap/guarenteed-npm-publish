@@ -9,5 +9,5 @@ export enum Subjects {
   JobHomeDataReply = "job:homedatareply",
   MychatData = "user:mychat-data",
   MychatDataReply = "user:mychat-data-reply",
-
+  MessageDataUser = "message-data-user",
 }
